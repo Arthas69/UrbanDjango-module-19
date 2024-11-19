@@ -1,0 +1,12 @@
+{% extends "platform.html" %}
+
+{% block content %}
+    <ul>
+        {% for game in games %}
+            <li>{{ game.title }} | {{ game.description }}. Стоимость: {{ game.cost }}<button>Купить</button></li>
+        {% endfor %}
+    </ul>
+    <form action="/platform">
+        <button>Вернуться назад</button>
+    </form>
+{% endblock %}

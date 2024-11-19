@@ -1,0 +1,14 @@
+{% extends "platform.html" %}
+
+{% block content %}
+    {% if cart %}
+        <ul>
+            {% for item in cart %}
+                <li>{{ item.title }} - {{ item.price }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <form action="/platform">
+        <button>Вернуться назад</button>
+    </form>
+{% endblock %}
