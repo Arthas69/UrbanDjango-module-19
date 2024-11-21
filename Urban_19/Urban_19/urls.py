@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 
 from task1.views import platform, all_games, my_cart, sign_up_by_django
+from blogs.views import all_posts
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,5 +26,6 @@ urlpatterns = [
     path('platform/', platform),
     path('platform/games/', all_games),
     path('platform/cart/', my_cart),
+    path('posts/', all_posts)
 
 ]
